@@ -1,23 +1,5 @@
-Требуется реализовать сервис для получения данных об офисах Альфа-Банка и их загруженности.
-Сервис должен предоставлять REST API на http://IP:8082.
-Файл с описанием API – api.json.
-Так как мы не сомневаемся, что вы умейте гуглить, дали вам немного подсказок для задачи и ссылок на статьи, чтобы экономить бесценное время, которого и так немного.
-
-Данные лежат в PostgreSQL.
-Для запуска PostgreSQL:
-mkdir task3 ; cd task3
-wget https://raw.githubusercontent.com/evgenyshiryaev/alfa-battle-resources/master/task3/docker-compose.yml
-wget https://raw.githubusercontent.com/evgenyshiryaev/alfa-battle-resources/master/task3/Dockerfile
-wget https://raw.githubusercontent.com/evgenyshiryaev/alfa-battle-resources/master/task3/init_db.sql
-docker-compose up -d
-Для остановки (в папке task3):
-docker-compose down
-Адрес: IP:5432
-DB: alfa_battle
-Auth: alfa_battle / qwe123
-
-* IP - внешний IP виртуальной машины.
-* Все ресурсы лежат тут: https://github.com/evgenyshiryaev/alfa-battle-resources/tree/master/task3
+Требуется реализовать сервис для получения данных об офисах банка и их загруженности.
+Сервис должен предоставлять REST API 
 
 Задачи
 1. Получение данных офиса по id
@@ -42,9 +24,6 @@ Auth: alfa_battle / qwe123
   “status”: “branch not found”
 }
 
-
-Следующая задача доступна после получения 8 баллов.
-
 2. Получение ближайшего к указанным координатам офиса (по-умному)
 По-умному, потому что Земля не плоская, как в Задаче 1.
 Это не так сложно: https://medium.com/@congyuzhou/%D1%80%D0%B0%D1%81%D1%81%D1%82%D0%BE%D1%8F%D0%BD%D0%B8%D0%B5-%D0%BC%D0%B5%D0%B6%D0%B4%D1%83-%D0%B4%D0%B2%D1%83%D0%BC%D1%8F-%D1%82%D0%BE%D1%87%D0%BA%D0%B0%D0%BC%D0%B8-%D0%BD%D0%B0-%D0%BF%D0%BE%D0%B2%D0%B5%D1%80%D1%85%D0%BD%D0%BE%D1%81%D1%82%D0%B8-%D0%B7%D0%B5%D0%BC%D0%BB%D0%B8-a398352bfbde
@@ -68,8 +47,6 @@ Auth: alfa_battle / qwe123
 
 Distance - дистанция указывается в метрах, при дробных числах, необходимо округлить.
 
-
-Следующая задача доступна после получения 28 баллов.
 
 3. Предсказание загруженности офиса
 Необходимо на основе данных предсказать загруженность любого из офисов в определенный час, а именно необходимо предсказать, сколько клиент потратит время находясь в очереди, ожидая пока его обслужат.
